@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8758106770578703047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247200bfc45929f41a4b5286135d5029, type: 3}
+  m_Name: 1x3x6_corner 1
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: 9db68ad0-2a35-48d5-b75a-aede1e3c52a5
+  _pluginPrefab: {fileID: -3751103885313484625, guid: 44756173a6ce6c6448f3f92e7462bde6,
+    type: 2}
+  _preview:
+    _prefabAsset: {fileID: 6972533700790929937, guid: 7985f28d00248c34f85b6110b3a5528f,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _uiSelected: 0
+  _used: 1
+  _spawnChance: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8eb84aa7564a314baba325992456a32, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  _profileName: Default
+  _examplePrefab: {fileID: 6089386033127084647, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_InnerCorner: {fileID: 5451710311112055527, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_OuterCorner: {fileID: 4231344122821780235, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_MidStraight: {fileID: 7518858624759733268, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_FirstStraight: {fileID: 3444598469309698938, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_LastStraight: {fileID: 7316304309914477667, guid: ca1e236a511a96e4ba7fdcfb8b1f30eb,
+    type: 3}
+  _ep_PillarInnerCornerBegin: {fileID: 0}
+  _ep_PillarInnerCornerEnd: {fileID: 0}
+  _ep_PillarOuterCornerBegin: {fileID: 0}
+  _ep_PillarOuterCornerEnd: {fileID: 0}
+  _ep_PillarInnerCornerMiddle: {fileID: 0}
+  _ep_PillarOuterCornerMiddle: {fileID: 0}
+  _wallProperties:
+    upAxis: 1
+    forwardAxis: 2
+    invertForwardAxis: 1
+    innerAxis: 0
+    invertInnerAxis: 1
+    height: 6
+    forwardSize: 3
+  _truncateForwardSize: 0
+  _spawnPillars: 0
+  _pillarProfileName: Default
+  _innerCornerRT:
+    position: {x: 2.828427, y: -3, z: 0.7071067}
+    rotation: {x: -0, y: 0.92387956, z: 0, w: -0.38268346}
+  _outerCornerRT:
+    position: {x: -2.8284268, y: -3, z: -0.7071068}
+    rotation: {x: 0, y: 0.38268346, z: 0, w: 0.92387956}
+  _straightRT:
+    position: {x: -0.5, y: -3, z: 0.5}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+  _pillarMidStraightBeginRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarMidStraightEndRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarInnerCornerBeginRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarInnerCornerEndRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarOuterCornerBeginRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarOuterCornerEndRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarInnerCornerMiddleRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _pillarOuterCornerMiddleRT:
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+  _straight_ForwardPushDistance_Inner: 2
+  _straight_InnerPushDistance_Inner: 2
+  _straight_ForwardPushDistance_Outer: 2
+  _straight_InnerPushDistance_Outer: 2
+  _straightWallPrefabs:
+  - {fileID: 6390250881790821620}
+  _innerCornerPrefabs:
+  - {fileID: -8758106770578703047}
+  _outerCornerPrefabs:
+  - {fileID: 7873377097259299783}
+--- !u!114 &6390250881790821620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247200bfc45929f41a4b5286135d5029, type: 3}
+  m_Name: 1x3x6_Wall
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: cc33c30c-e391-49b6-9db6-83029cec59e2
+  _pluginPrefab: {fileID: -6030572785620319854, guid: 44756173a6ce6c6448f3f92e7462bde6,
+    type: 2}
+  _preview:
+    _prefabAsset: {fileID: 8642717921937430235, guid: cf38cae6d3c50f54bb1a103574db1d95,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _uiSelected: 0
+  _used: 1
+  _spawnChance: 1
+--- !u!114 &7873377097259299783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 247200bfc45929f41a4b5286135d5029, type: 3}
+  m_Name: 1x3x6_corner 1
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: a38907ee-66e0-4e5d-8170-16280799ec5d
+  _pluginPrefab: {fileID: -3751103885313484625, guid: 44756173a6ce6c6448f3f92e7462bde6,
+    type: 2}
+  _preview:
+    _prefabAsset: {fileID: 6972533700790929937, guid: 7985f28d00248c34f85b6110b3a5528f,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _uiSelected: 0
+  _used: 1
+  _spawnChance: 1

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00743c030598d944fbb81f14e930ce63, type: 3}
+  m_Name: Wall
+  m_EditorClassIdentifier: 
+  _profileName: Wall
+  _tileRules:
+  - {fileID: 7297334277389068671}
+--- !u!114 &7297334277389068671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c745aa5119a074084fa542ea1e3ece, type: 3}
+  m_Name: TileRule
+  m_EditorClassIdentifier: 
+  _ruleType: 0
+  _ruleRotationMode: 1
+  _ruleMask:
+    _reqOnMask: 16777216
+    _rotatedReqOnMask_90: 16777216
+    _rotatedReqOnMask_180: 16777216
+    _rotatedReqOnMask_270: 16777216
+    _mirrXReqOnMask: 16777216
+    _mirrZReqOnMask: 16777216
+    _numReqOnBitsSet: 1
+    _reqOffMask: 0
+    _rotatedReqOffMask_90: 0
+    _rotatedReqOffMask_180: 0
+    _rotatedReqOffMask_270: 0
+    _mirrXReqOffMask: 0
+    _mirrZReqOffMask: 0
+    _numReqOffBitsSet: 0
+  _prefabs: []
+  _prefabViewState: {fileID: -6665492512406537002, guid: 29806ac3d3cb1f646bacde93ca80a41a,
+    type: 2}

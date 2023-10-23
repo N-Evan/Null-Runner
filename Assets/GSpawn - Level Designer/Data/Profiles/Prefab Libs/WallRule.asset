@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6030572785620319854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfdaf7f2c4c1d04580d676ed3717f21, type: 3}
+  m_Name: 1x3x6_Wall
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: 2aadf292-4f5d-4f43-a336-8b5b4392265e
+  _prefabAsset: {fileID: 8642717921937430235, guid: cf38cae6d3c50f54bb1a103574db1d95,
+    type: 3}
+  _preview:
+    _prefabAsset: {fileID: 8642717921937430235, guid: cf38cae6d3c50f54bb1a103574db1d95,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _sceneToObjectGroup:
+    _serializedKeys: []
+    _serializedValues: []
+  _spawnGuideTransformTRS:
+    _position: {x: 24, y: 12, z: 44}
+    _rotation: {x: -0, y: -1, z: -0, w: 0}
+    _scale: {x: 1, y: 1, z: 1}
+  _modularSnapVerticalStep: 12
+  _surfaceSnapAppliedOffsetFromSurface: 0
+  _modelSize: {x: 1, y: 6, z: 3}
+  _uiSelected: 1
+--- !u!114 &-3751103885313484625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfdaf7f2c4c1d04580d676ed3717f21, type: 3}
+  m_Name: 1x3x6_corner 1
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: 31246426-b6ef-49f0-8a74-9c9d51fdebdc
+  _prefabAsset: {fileID: 6972533700790929937, guid: 7985f28d00248c34f85b6110b3a5528f,
+    type: 3}
+  _preview:
+    _prefabAsset: {fileID: 6972533700790929937, guid: 7985f28d00248c34f85b6110b3a5528f,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _sceneToObjectGroup:
+    _serializedKeys: []
+    _serializedValues: []
+  _spawnGuideTransformTRS:
+    _position: {x: 6, y: 0, z: -3}
+    _rotation: {x: -0, y: -1, z: -0, w: 0}
+    _scale: {x: 1, y: 1, z: 1}
+  _modularSnapVerticalStep: 0
+  _surfaceSnapAppliedOffsetFromSurface: 0
+  _modelSize: {x: 4, y: 6, z: 4}
+  _uiSelected: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d27d60231fbfd54a8dd0a2b498f7841, type: 3}
+  m_Name: WallRule
+  m_EditorClassIdentifier: 
+  _profileName: WallRule
+  _libs:
+  - {fileID: 4672937311387991544}
+--- !u!114 &4672937311387991544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b09c502d52d26944bd03a0b831a19c4, type: 3}
+  m_Name: Mazeblocks
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: edd143b1-0e72-40e1-a3cb-731a5e1d3cdc
+  _parentLib: {fileID: 0}
+  _directChildren: []
+  _prefabsVisibleInManager: 1
+  _libName: Mazeblocks
+  _folderPath:
+    _path: Assets/Prefabs/Mazeblocks
+    _reveresedPath: Mazeblocks/Prefabs/Assets
+  _prefabs:
+  - {fileID: -3751103885313484625}
+  - {fileID: -6030572785620319854}
+  - {fileID: 7688371362378713362}
+  _uiSelected: 1
+--- !u!114 &7688371362378713362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bfdaf7f2c4c1d04580d676ed3717f21, type: 3}
+  m_Name: Mazewall
+  m_EditorClassIdentifier: 
+  _guid:
+    _guidString: 62f5fdfb-93ee-475c-8f90-07d939015586
+  _prefabAsset: {fileID: 6982192869839697835, guid: e670fa73f0412e34f92787a7bae5538e,
+    type: 3}
+  _preview:
+    _prefabAsset: {fileID: 6982192869839697835, guid: e670fa73f0412e34f92787a7bae5538e,
+      type: 3}
+    _texture: {fileID: 0}
+    _yaw: 0
+    _pitch: 0
+  _sceneToObjectGroup:
+    _serializedKeys: []
+    _serializedValues: []
+  _spawnGuideTransformTRS:
+    _position: {x: 0, y: 1, z: 0}
+    _rotation: {x: 0, y: 0, z: 0, w: 1}
+    _scale: {x: 1, y: 1, z: 1}
+  _modularSnapVerticalStep: 0
+  _surfaceSnapAppliedOffsetFromSurface: 0
+  _modelSize: {x: 1, y: 6, z: 1}
+  _uiSelected: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e414d762516c75345ae4481a3b586210, type: 3}
+  m_Name: PluginPrefabManagerUI
+  m_EditorClassIdentifier: 
+  _prefabViewState: {fileID: -8345640127628620132, guid: b2352994435491e47b40568abb0f6d22,
+    type: 2}
+  _prefabPreviewScale: 0.74
+  _prefabFilter: -1
+  _targetLibs:
+  - {fileID: -1756328100786101898, guid: cc3abf3fc8101cb4c93ce8334ce0be4c, type: 2}
+  _targetLibSet:
+    _serializedList:
+    - {fileID: -1756328100786101898, guid: cc3abf3fc8101cb4c93ce8334ce0be4c, type: 2}
+  _numPrefabs: 1
