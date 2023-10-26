@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -18,13 +19,24 @@ public class PlayerInventory : MonoBehaviour
 
     public void UseKeyFromInventory(KeySO keySo)
     {
-        if (Inventory.Count <= 0)
-            return;
-        var hasKey = Inventory.FirstOrDefault(x => x.KeyName == keySo.KeyName);
+        var hasKey = HasKey(keySo);
         if (hasKey)
         {
             OnKeyUsed?.Invoke(keySo);
             Inventory.Remove(keySo);
         }
+    }
+
+    public bool HasKey(KeySO key)
+    {
+        if (Inventory.Count <= 0)
+            return false;
+        var hasKey = Inventory.FirstOrDefault(x => x.KeyName == key.KeyName);
+        return hasKey ? true : false;
+    }
+
+    public KeySO GetKey(KeySO key)
+    {
+        return Inventory.FirstOrDefault(x => x.KeyName == key.KeyName);
     }
 }
