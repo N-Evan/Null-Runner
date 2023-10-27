@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class LeaderboardUiController : MonoBehaviour
 {
-    public TextMeshProUGUI LeaderboardEntryPrefab;
+    public LeaderboardEntry LeaderboardEntryPrefab;
     public Transform ContentParent;
-    private readonly int _entriesPerPage = 10;
+    private readonly int _entriesPerPage = 20;
 
     private List<LeaderboardData> _leaderboardEntries;
     private int _currentPage = 1;
@@ -27,15 +26,15 @@ public class LeaderboardUiController : MonoBehaviour
     public void DisplayLeaderboard(int page)
     {
         ClearLeaderboardEntries();
-
+        LoadLeaderboardData();
         int startIndex = (page - 1) * _entriesPerPage;
         int endIndex = Mathf.Min(startIndex + _entriesPerPage, _leaderboardEntries.Count);
 
         for (int i = startIndex; i < endIndex; i++)
         {
             LeaderboardData entry = _leaderboardEntries[i];
-            TextMeshProUGUI entryText = Instantiate(LeaderboardEntryPrefab, ContentParent);
-            entryText.text = $"{i + 1}. {entry.Name} - {entry.CompletionTime:HH:mm:ss}";
+            LeaderboardEntry entryPrefab = Instantiate(LeaderboardEntryPrefab, ContentParent);
+            entryPrefab.SetupEntry(entry, i + 1);
         }
     }
 

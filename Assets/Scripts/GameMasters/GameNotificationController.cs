@@ -14,7 +14,7 @@ public class GameNotificationController : MonoBehaviour
 
     public void OnKeySOPickup(KeySO key)
     {
-        NotificationText.text = $"You picked up the {key.name} key!";
+        NotificationText.text = $"You picked up the {key.KeyName} key!";
         SetupTextUi();
     }
 

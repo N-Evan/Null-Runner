@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class LeaderboardController : MonoBehaviour
@@ -34,7 +35,7 @@ public class LeaderboardController : MonoBehaviour
         _leaderboardEntries = LoadLeaderboard();
     }
 
-    public void AddEntry(string name, DateTime completionTime)
+    public void AddEntry(string name, TimeSpan completionTime)
     {
         LeaderboardData newEntry = new LeaderboardData(name, completionTime);
         _leaderboardEntries.Add(newEntry);
@@ -44,18 +45,20 @@ public class LeaderboardController : MonoBehaviour
 
     public List<LeaderboardData> GetLeaderboard()
     {
+        if (_leaderboardEntries == null)
+            _leaderboardEntries = LoadLeaderboard();
         return _leaderboardEntries;
     }
 
     private List<LeaderboardData> LoadLeaderboard()
     {
         List<LeaderboardData> entries = new List<LeaderboardData>();
-        string path = Path.Combine(Application.persistentDataPath, _leaderboardFileName);
+        string path = Path.Combine(Application.persistentDataPath + "/", _leaderboardFileName);
 
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
-            entries = JsonUtility.FromJson<List<LeaderboardData>>(json);
+            entries = JsonConvert.DeserializeObject<List<LeaderboardData>>(json);
         }
 
         return entries;
@@ -63,7 +66,7 @@ public class LeaderboardController : MonoBehaviour
 
     private void SaveLeaderboard(List<LeaderboardData> entries)
     {
-        string json = JsonUtility.ToJson(entries);
+        string json = JsonConvert.SerializeObject(entries);
         string path = Path.Combine(Application.persistentDataPath, _leaderboardFileName);
         File.WriteAllText(path, json);
     }

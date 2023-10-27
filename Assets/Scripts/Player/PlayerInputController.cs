@@ -19,8 +19,6 @@ public class PlayerInputController : MonoBehaviour
         return Input.GetKey(KeyCode.Space);
     }
 
-
-
     private PlayerControls _playerControls;
 
     public delegate void OnMoveEvent(Vector2 direction);

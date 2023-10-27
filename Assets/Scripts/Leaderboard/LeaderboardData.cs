@@ -1,11 +1,12 @@
 using System;
 
+[Serializable]
 public class LeaderboardData
 {
     public string Name;
-    public DateTime CompletionTime;
+    public TimeSpan CompletionTime;
 
-    public LeaderboardData(string name, DateTime time)
+    public LeaderboardData(string name, TimeSpan time)
     {
         Name = name;
         CompletionTime = time;

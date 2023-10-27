@@ -15,7 +15,7 @@ public class GameTimer : MonoBehaviour
         if (IsTimerRunning)
         {
             _timer += Time.deltaTime;
-            TimerUiElement.text = GetCurrentTime();
+            TimerUiElement.text = GetCurrentTimeInString();
         }
     }
 
@@ -31,11 +31,13 @@ public class GameTimer : MonoBehaviour
         SetTimerState(false);
     }
 
-    public string GetCurrentTime()
+    public string GetCurrentTimeInString()
     {
         TimeSpan currentTime = TimeSpan.FromSeconds(_timer);
         return currentTime.ToString(@"hh\:mm\:ss");
     }
+
+    public TimeSpan DateTimeGetTimerAsDateTime() => TimeSpan.FromSeconds(_timer);
 
     private void SetTimerState(bool activateTimer)
     {

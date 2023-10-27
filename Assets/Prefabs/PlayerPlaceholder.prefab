@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 4999960072628932827}
   - component: {fileID: 4648375883721273677}
   - component: {fileID: 3271303208533976144}
+  - component: {fileID: 8315643176725244896}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -387,6 +388,22 @@ MonoBehaviour:
   m_DefaultActionMap: GroundMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8315643176725244896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230864787570827130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0497130d0c610045b70087817582a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: []
+  OnKeyUsed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &390810336937888387
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +415,7 @@ GameObject:
   - component: {fileID: 2802835993391084036}
   m_Layer: 0
   m_Name: PlayerPlaceholder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -987,7 +1004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484037262785923034}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10679859, y: -0.000000004276994, z: 4.5940432e-10, w: 0.9942807}
+  m_LocalRotation: {x: 0.0000000620655, y: -0.9942807, z: 0.10679861, w: 0.0000005778215}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1033,6 +1050,13 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1868,7 +1892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3844106930284978805}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.24498576, y: -0, z: -0, w: 0.9695267}
+  m_LocalRotation: {x: 0.0000001460229, y: -0.9695267, z: 0.2449858, w: 0.00000057788293}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1914,6 +1938,13 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2588,7 +2619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6236918666765507900}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28978413, y: -0.000000016468093, z: 0.0000000049861373, w: 0.95709205}
+  m_LocalRotation: {x: 0.00000016135523, y: -0.95709205, z: 0.28978416, w: 0.0000005329201}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2634,6 +2665,13 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3238,7 +3276,7 @@ Transform:
   m_GameObject: {fileID: 7575374436098119785}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -3}
+  m_LocalPosition: {x: 0.0000034868708, y: 2, z: 2.9999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3279,6 +3317,13 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3391,14 +3436,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7575374436098119785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f37278780a889488083ff8689875a4, type: 3}
+  m_Script: {fileID: 11500000, guid: e36654181b6e7b0428d4f4de7b186ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Orientation: {fileID: 3056284145930196263}
   Player: {fileID: 2108766012231812925}
   PlayerObject: {fileID: 791004288773108446}
   RigidBody: {fileID: 2108766012231812925}
-  RotationSpeed: 7
+  RotationSpeed: 12
 --- !u!1 &7621324328436179522
 GameObject:
   m_ObjectHideFlags: 0

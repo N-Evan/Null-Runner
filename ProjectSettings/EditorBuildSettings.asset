@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/Scenes/Mainmenu.unity
+    guid: 1830bca1704c37b4db14e8c04b9c5289
+  - enabled: 1
+    path: Assets/Scenes/Maze_Blockout.unity
+    guid: 5f735a905368e3c49a38b1581a791f99
   m_configObjects: {}
