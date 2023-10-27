@@ -22,6 +22,7 @@ public class PlayerInputController : MonoBehaviour
     private PlayerControls _playerControls;
 
     public delegate void OnMoveEvent(Vector2 direction);
+
     public OnMoveEvent OnMovement;
 
     public delegate void OnActionEvent();
@@ -37,7 +38,7 @@ public class PlayerInputController : MonoBehaviour
     public OnActionEvent OnPausePress;
     public OnActionEvent OnCrouchPress;
 
-    #endregion
+    #endregion Ground Movement
 
     #region UIMap
 
@@ -45,7 +46,7 @@ public class PlayerInputController : MonoBehaviour
     public OnActionEvent OnUnpauseAction;
     public OnActionEvent OnCutsceneSkipAction;
 
-    #endregion
+    #endregion UIMap
 
     private void Awake()
     {
@@ -61,7 +62,6 @@ public class PlayerInputController : MonoBehaviour
     {
         _playerControls.Disable();
     }
-
 
     #region Ground Movement
 
@@ -139,7 +139,7 @@ public class PlayerInputController : MonoBehaviour
         OnPausePress?.Invoke();
     }
 
-    #endregion
+    #endregion Ground Movement
 
     #region UI Map
 
@@ -161,5 +161,5 @@ public class PlayerInputController : MonoBehaviour
         OnCutsceneSkipAction?.Invoke();
     }
 
-    #endregion
+    #endregion UI Map
 }

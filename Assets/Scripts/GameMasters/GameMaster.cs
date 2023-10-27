@@ -27,10 +27,12 @@ public class GameMaster : MonoBehaviour
     }
 
     public GameObject PostGameUi;
+    public GameObject PauseUi;
 
     private void Awake()
     {
         GameTimeMaster = GetComponent<GameTimer>();
+        FindObjectOfType<PlayerInputController>().OnPausePress += PauseGame;
     }
 
     public void StartGame()
@@ -44,6 +46,12 @@ public class GameMaster : MonoBehaviour
     [ContextMenu("End Game")]
     public void EndGame()
     {
+        PauseGame();
+        PostGameUi.SetActive(true);
+    }
+
+    public void PauseGame()
+    {
         FindObjectOfType<PlayerInputController>().enabled = false;
         FindObjectOfType<ThirdPersonCamera>().enabled = false;
         FindObjectOfType<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 0f;
@@ -51,7 +59,19 @@ public class GameMaster : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         GameTimeMaster.PauseTimer();
-        PostGameUi.SetActive(true);
+        PauseUi.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        FindObjectOfType<PlayerInputController>().enabled = true;
+        FindObjectOfType<ThirdPersonCamera>().enabled = true;
+        FindObjectOfType<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 2f;
+        FindObjectOfType<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 300f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        GameTimeMaster.StartTimer();
+        PauseUi.SetActive(false);
     }
 
     public void RestartGame()
