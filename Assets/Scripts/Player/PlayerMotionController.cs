@@ -29,6 +29,8 @@ public class PlayerMotionController : MonoBehaviour
 
     Rigidbody _rb;
     [field: SerializeField] public bool IsSprinting { get; private set; }
+    public ParticleSystem EchoParticles;
+    
 
     private void Start()
     {
@@ -37,6 +39,11 @@ public class PlayerMotionController : MonoBehaviour
 
         _isReadyToJump = true;
     }
+
+    public void EmitEchoes()
+{
+	EchoParticles.Play();
+}
 
     private void Update()
     {
@@ -73,6 +80,7 @@ public class PlayerMotionController : MonoBehaviour
         _verticalInput = inputValues.y;
     }
 
+    
     public void HandleJump()
     {
         if (_isReadyToJump && _isGrounded)

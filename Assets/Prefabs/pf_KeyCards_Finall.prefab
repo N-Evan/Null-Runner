@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemToPikcup: {fileID: 11400000, guid: 046c691b492d73d45996ffbeb194cd6c, type: 2}
+  OnPickup:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &2498824289679821770
 SphereCollider:
   m_ObjectHideFlags: 0
