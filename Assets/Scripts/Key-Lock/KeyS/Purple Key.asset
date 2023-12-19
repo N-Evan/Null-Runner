@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6c8dc543dfed6b4d8914bb0cff3c29c, type: 3}
-  m_Name: Black Key
+  m_Name: Purple Key
   m_EditorClassIdentifier: 
-  KeyName: Black
+  KeyName: Purple
