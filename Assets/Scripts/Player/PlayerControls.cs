@@ -125,6 +125,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LightReleaseButton"",
+                    ""type"": ""Button"",
+                    ""id"": ""09c48904-61d9-4ce7-afab-a384cce14b53"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -686,6 +695,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KeyboardMouse"",
                     ""action"": ""JumpButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af9f12c0-0296-4a94-a515-9eb2c56e0d5b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LightReleaseButton"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7077ab83-64f1-4e39-a77f-7ce0521dcdfd"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LightReleaseButton"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1381,6 +1412,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_GroundMovement_CrouchButton = m_GroundMovement.FindAction("CrouchButton", throwIfNotFound: true);
         m_GroundMovement_SprintButton = m_GroundMovement.FindAction("SprintButton", throwIfNotFound: true);
         m_GroundMovement_JumpButton = m_GroundMovement.FindAction("JumpButton", throwIfNotFound: true);
+        m_GroundMovement_LightReleaseButton = m_GroundMovement.FindAction("LightReleaseButton", throwIfNotFound: true);
         // UIMap
         m_UIMap = asset.FindActionMap("UIMap", throwIfNotFound: true);
         m_UIMap_Navigate = m_UIMap.FindAction("Navigate", throwIfNotFound: true);
@@ -1466,6 +1498,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_GroundMovement_CrouchButton;
     private readonly InputAction m_GroundMovement_SprintButton;
     private readonly InputAction m_GroundMovement_JumpButton;
+    private readonly InputAction m_GroundMovement_LightReleaseButton;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
@@ -1481,6 +1514,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @CrouchButton => m_Wrapper.m_GroundMovement_CrouchButton;
         public InputAction @SprintButton => m_Wrapper.m_GroundMovement_SprintButton;
         public InputAction @JumpButton => m_Wrapper.m_GroundMovement_JumpButton;
+        public InputAction @LightReleaseButton => m_Wrapper.m_GroundMovement_LightReleaseButton;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1523,6 +1557,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @JumpButton.started += instance.OnJumpButton;
             @JumpButton.performed += instance.OnJumpButton;
             @JumpButton.canceled += instance.OnJumpButton;
+            @LightReleaseButton.started += instance.OnLightReleaseButton;
+            @LightReleaseButton.performed += instance.OnLightReleaseButton;
+            @LightReleaseButton.canceled += instance.OnLightReleaseButton;
         }
 
         private void UnregisterCallbacks(IGroundMovementActions instance)
@@ -1560,6 +1597,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @JumpButton.started -= instance.OnJumpButton;
             @JumpButton.performed -= instance.OnJumpButton;
             @JumpButton.canceled -= instance.OnJumpButton;
+            @LightReleaseButton.started -= instance.OnLightReleaseButton;
+            @LightReleaseButton.performed -= instance.OnLightReleaseButton;
+            @LightReleaseButton.canceled -= instance.OnLightReleaseButton;
         }
 
         public void RemoveCallbacks(IGroundMovementActions instance)
@@ -1743,6 +1783,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnCrouchButton(InputAction.CallbackContext context);
         void OnSprintButton(InputAction.CallbackContext context);
         void OnJumpButton(InputAction.CallbackContext context);
+        void OnLightReleaseButton(InputAction.CallbackContext context);
     }
     public interface IUIMapActions
     {

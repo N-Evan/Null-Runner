@@ -103,6 +103,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "LightReleaseButton",
+                    "type": "Button",
+                    "id": "09c48904-61d9-4ce7-afab-a384cce14b53",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -664,6 +673,28 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "JumpButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "af9f12c0-0296-4a94-a515-9eb2c56e0d5b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightReleaseButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7077ab83-64f1-4e39-a77f-7ce0521dcdfd",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LightReleaseButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

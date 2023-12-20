@@ -37,6 +37,7 @@ public class PlayerInputController : MonoBehaviour
     public OnActionEvent OnOpenInventory;
     public OnActionEvent OnPausePress;
     public OnActionEvent OnCrouchPress;
+    public OnActionEvent OnLightReleasePress;
 
     #endregion Ground Movement
 
@@ -137,6 +138,12 @@ public class PlayerInputController : MonoBehaviour
     {
         if (!context.performed) return;
         OnPausePress?.Invoke();
+    }
+
+    public void LightRelease(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        OnLightReleasePress?.Invoke();
     }
 
     #endregion Ground Movement

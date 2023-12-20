@@ -46,32 +46,31 @@ public class GameMaster : MonoBehaviour
     [ContextMenu("End Game")]
     public void EndGame()
     {
-        PauseGame();
+        RestrictPlayer(true);
         PostGameUi.SetActive(true);
     }
 
     public void PauseGame()
     {
-        FindObjectOfType<PlayerInputController>().enabled = false;
-        FindObjectOfType<ThirdPersonCamera>().enabled = false;
-        FindObjectOfType<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 0f;
-        FindObjectOfType<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 0f;
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-        GameTimeMaster.PauseTimer();
+        RestrictPlayer(true);
         PauseUi.SetActive(true);
     }
 
     public void ResumeGame()
     {
-        FindObjectOfType<PlayerInputController>().enabled = true;
-        FindObjectOfType<ThirdPersonCamera>().enabled = true;
-        FindObjectOfType<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 2f;
-        FindObjectOfType<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 300f;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        RestrictPlayer(false);
         GameTimeMaster.StartTimer();
         PauseUi.SetActive(false);
+    }
+
+    public void RestrictPlayer(bool shouldRestrict)
+    {
+        FindObjectOfType<PlayerInputController>().enabled = !shouldRestrict;
+        FindObjectOfType<ThirdPersonCamera>().enabled = !shouldRestrict;
+        FindObjectOfType<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = shouldRestrict ? 0f : 2f;
+        FindObjectOfType<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = shouldRestrict ? 0f : 300f;
+        Cursor.visible = shouldRestrict;
+        Cursor.lockState = shouldRestrict ? CursorLockMode.Confined : CursorLockMode.Locked;
     }
 
     public void RestartGame()

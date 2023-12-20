@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
     public PlayerAnimationController AnimationController;
     public PlayerMotionController MotionController;
     public PlayerInputController InputController;
+    public LightReleaseTechnique LightReleaseTechniqueController;
 
     private float _horizontalInput;
     private float _verticalInput;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         InputController.OnSprintRelease += MotionController.SprintReleased;
         InputController.OnJumpPress += MotionController.HandleJump;
         InputController.OnJumpPress += AnimationController.PlayJumpAnim;
+        InputController.OnLightReleasePress += LightReleaseTechniqueController.ReleaseLightChi;
     }
 
     private void OnDisable()
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
         InputController.OnSprintRelease -= MotionController.SprintReleased;
         InputController.OnJumpPress -= MotionController.HandleJump;
         InputController.OnJumpPress -= AnimationController.PlayJumpAnim;
+        InputController.OnLightReleasePress -= LightReleaseTechniqueController.ReleaseLightChi;
     }
 
     private void Update()
