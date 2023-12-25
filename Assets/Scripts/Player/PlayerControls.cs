@@ -458,6 +458,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""621b1c49-d406-4e30-9494-7371ce153758"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""d4acf002-8da1-4a55-9e0f-f9a7c5101d61"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
